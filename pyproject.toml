@@ -35,7 +35,7 @@ dnspython = "2.2.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
-coverage = "^6.3.2"
+coverage = { version = "^6.4", extras = ["toml"] }
 flake8 = "^4.0.1"
 flake8-annotations = "^2.9.0"
 flake8-bugbear = "^22.4.25"
@@ -68,6 +68,9 @@ style = "pep440"
 
 [tool.black]
 line-length = 127
+
+[tool.coverage.run]
+omit = ["*/tests/*"]
 
 [tool.isort]
 profile = "black"
